@@ -1,0 +1,53 @@
+<!--ADD MORE FEATURES SUCH AS: TOTAL AMOUNT, GAIN/LOSS HIGHLIGHT,  AND EDIT BUTTON-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Expense Tracker</title>
+</head>
+<body></body>
+  <div class="container" id="container">
+    <div class="header">
+      <h1>EXPENSE TRACKER</h1>
+    </div>
+    <div class="expense-tracker">
+      <table id="table">
+        <thead>
+          <tr>
+            <th width="20%">DATE</th>
+            <th width="20%">AMOUNT</th>
+            <th width="40%">DESCRIPTION</th>
+            <th width="20%"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <div class="input-feature">
+      <div class="data-entry">
+        DATE:<input id="date" type="date">
+        AMOUNT: <input id="amount" type="number" placeholder="ENTER AMOUNT">
+        DESCRIPTION: <input id="description" type="text" placeholder="ENTER DESCRIPTION">
+      </div>
+      <div class="add-button">
+        <button onclick="addToTable()">ADD</button>
+        <br><span id="error"></span>
+      </div>
+    </div>
+  </div>
+  <div class="edit-popup" id="edit-popup">
+    DATE<input id="edit-date" type="date">
+    AMOUNT <input id="edit-amount" type="number" placeholder="ENTER AMOUNT">
+    DESCRIPTION <input id="edit-description" type="text" placeholder="ENTER DESCRIPTION">
+    <div class="popup-buttons">
+      <button id="confirm-btn" class="confirm-btn">CONFIRM</button>
+      <button class="cancel-btn" onclick="closePopUp()">CANCEL</button>
+   </div>
+   <span id="edit-notif"></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
